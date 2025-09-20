@@ -4,7 +4,7 @@ import { Globe, Users } from 'lucide-react';
 const Team = () => {
   const teamMembers = [
     {
-      name: 'Ariyan Rahman Anas',
+      name: 'Salma Akther Mim',
       role: 'Chief Executive Officer',
       image: staticAssets.images.CEO,
       bio: "15+ years in logistics and supply chain management. Led the company's expansion into international markets.",

@@ -35,6 +35,7 @@ import Logo from '@/components/common/Logo';
 import { Role } from '@/constants';
 import { Button } from '@/components/ui/button';
 import { useParcelTrackingQuery } from '@/redux/features/parcels/parcelApi';
+import { ModeToggle } from '@/components/ui/mode-toggle';
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -194,27 +195,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="bg-black text-white shadow-2xl z-50 sticky top-0">
-      {/* Top Info Bar */}
-      <div className="bg-primary text-black py-2 text-sm">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2">
-              <Phone className="w-4 h-4" />
-              <span>24/7 Support: 1-800-DELIVERY</span>
-            </div>
-            <div className="hidden md:flex items-center gap-2">
-              <Mail className="w-4 h-4" />
-              <span>support@deliveryapp.com</span>
-            </div>
-          </div>
-          <div className="hidden md:flex items-center gap-2">
-            <Globe className="w-4 h-4" />
-            <span>Free shipping on orders over $50</span>
-          </div>
-        </div>
-      </div>
-
+    <nav className="  shadow-2xl z-50 sticky top-0">
       {/* Main Navbar */}
       <div className="container mx-auto px-2 pt-2">
         <div className="flex items-center justify-between h-16">
@@ -253,6 +234,7 @@ const Navbar = () => {
                       </DropdownItem>
                     ))}
                   </div>
+               
                 </div>
               ) : (
                 <CustomNavLink key={index} to={item.to || ''}>
@@ -263,6 +245,7 @@ const Navbar = () => {
           </div>
 
           {/* Right Side Actions */}
+          <ModeToggle></ModeToggle>
           <div className="hidden lg:flex items-center space-x-4">
             {/* Search */}
             <div className="relative">
@@ -275,6 +258,7 @@ const Navbar = () => {
                 className="bg-gray-800 text-white px-4 py-2 pl-10 rounded-lg border border-gray-700 focus:outline-none focus:border-primary focus:bg-gray-700 transition-all duration-300 w-full"
               />
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+              
 
               {/* Search Results */}
               {showResults && (
@@ -626,6 +610,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+      
       </div>
     </nav>
   );

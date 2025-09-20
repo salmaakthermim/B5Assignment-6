@@ -1,4 +1,4 @@
-import CEO from "./images/CEO.jpg"
+import CEO from "../assets/images/CEO.jpg.png"
 
 export const staticAssets = {
     images: {
