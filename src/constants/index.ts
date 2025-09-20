@@ -1,0 +1,22 @@
+export const Role = {
+    ADMIN: "ADMIN",
+    SENDER: "SENDER",
+    RECEIVER: "RECEIVER"
+}
+
+export const ParcelStatus = {
+    REQUESTED: "REQUESTED",
+    APPROVED: "APPROVED",
+    PICKUP_SCHEDULED: "PICKUP_SCHEDULED",
+    PICKED_UP: "PICKED_UP",
+    IN_TRANSIT: "IN_TRANSIT",
+    AT_HUB: "AT_HUB",
+    OUT_FOR_DELIVERY: "OUT_FOR_DELIVERY",
+    DELIVERED: "DELIVERED",
+    CANCELLED: "CANCELLED",
+    RETURN_REQUESTED: "RETURN_REQUESTED",
+    RETURNED: "RETURNED"
+}
+
+export const parcelCancellableStatus = ["REQUESTED", "APPROVED", "PICKUP_SCHEDULED"]
+export const parcelDeliverStatus = ["IN_TRANSIT", "OUT_FOR_DELIVERY"]
