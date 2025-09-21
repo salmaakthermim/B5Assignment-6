@@ -10,7 +10,7 @@ import {
 
 const Hero = () => {
   return (
-    <section className="bg-black text-white min-h-screen flex items-center relative overflow-hidden">
+    <section className="bg-background text-foreground min-h-screen flex items-center relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -33,7 +33,7 @@ const Hero = () => {
                 Swift & Secure
                 <span className="block text-primary">Delivery</span>
               </h1>
-              <p className="text-lg text-muted/85 leading-relaxed">
+              <p className="">
                 Experience lightning-fast parcel delivery with real-time
                 tracking, guaranteed security, and 99.9% on-time delivery rate
                 across the globe.
@@ -46,7 +46,7 @@ const Hero = () => {
               </Button>
               <Button
                 variant="outline"
-                className="px-10 py-5 font-semibold text-md text-white bg-transparent border-2"
+                className="px-10 py-5 font-semibold text-md  bg-transparent border-2"
               >
                 Ship Now <ArrowRight className="w-5 h-5" />
               </Button>
@@ -69,8 +69,8 @@ const Hero = () => {
           </div>
 
           <div className="relative border4 flex justify-center md:justify-end">
-            <div className="absolute inset-0 bg-primary rounded-3xl blur-3xl opacity-20"></div>
-            <div className="relative bg-gray-900 border border-gray-800 rounded-3xl p-8">
+            <div className="absolute inset-0  rounded-3xl blur-3xl opacity-20"></div>
+            <div className="relative  border border-gray-800 rounded-3xl p-8">
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
                   <Truck className="w-8 h-8 text-primary" />

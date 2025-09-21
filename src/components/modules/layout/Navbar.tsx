@@ -184,7 +184,7 @@ const Navbar = () => {
       className={({ isActive }) =>
         `block px-2 py-3 rounded-lg transition-colors duration-300 ${
           isActive
-            ? 'bg-primary/20 text-primary'
+            ? ' bg-background text-primary'
             : 'text-white hover:text-primary hover:bg-gray-800'
         }`
       }
@@ -195,9 +195,9 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="  shadow-2xl z-50 sticky top-0">
+    <nav className="   shadow-2xl z-50 sticky top-0">
       {/* Main Navbar */}
-      <div className="container mx-auto px-2 pt-2">
+      <div className=" bg-background text-foreground container mx-auto px-2 pt-2">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
             <button
@@ -578,7 +578,7 @@ const Navbar = () => {
 
             {/* Services submenu for mobile */}
             <div className="px-2">
-              <div className="text-white font-medium py-2">Services</div>
+              <div className="text-foreground font-medium py-2">Services</div>
               {navItems
                 .find((item) => item.hasDropdown)
                 ?.dropdownItems?.map((item, index) => (
@@ -617,3 +617,154 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+// import { useState } from "react";
+// // import { Link } from "react-router-dom";
+// import { ArrowRight, Menu, X } from "lucide-react";
+// // import { ModeToggle } from "./ModeToggle";
+// import { Link } from "react-router";
+// import { ModeToggle } from "@/components/ui/mode-toggle";
+
+// const Navbar = () => {
+//   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+//   const [trackingId, setTrackingId] = useState("");
+
+//   const navItems = [
+//     { label: "Home", to: "/" },
+//     { label: "About", to: "/about" },
+//     {
+//       label: "Services",
+//       hasDropdown: true,
+//       dropdownItems: [
+//         { label: "Delivery", to: "/services/delivery" },
+//         { label: "Tracking", to: "/services/tracking" },
+//       ],
+//     },
+//     { label: "Contact", to: "/contact" },
+//   ];
+
+//   const handleInputChange = (e) => setTrackingId(e.target.value);
+//   const handleKeyDown = (e) => {
+//     if (e.key === "Enter") {
+//       console.log("Tracking:", trackingId);
+//     }
+//   };
+
+//   return (
+//     <nav className="w-full border-b border-border bg-background text-foreground sticky top-0 z-50">
+//       <div className="max-w-7xl mx-auto px-4 lg:px-8 flex items-center justify-between h-16">
+//         {/* Logo */}
+//         <Link to="/" className="text-xl font-bold text-primary">
+//           ParcelPro
+//         </Link>
+
+//         {/* Desktop Nav */}
+//         <div className="hidden lg:flex items-center space-x-8">
+//           {navItems.map((item, index) =>
+//             item.hasDropdown ? (
+//               <div key={index} className="relative group">
+//                 <Link
+//                   to={item.to}
+//                   className="flex items-center gap-1 text-foreground hover:text-primary transition"
+//                 >
+//                   {item.label}
+//                   <ArrowRight className="w-4 h-4 transform rotate-90 group-hover:rotate-0 transition-transform duration-300" />
+//                 </Link>
+//                 <div className="absolute top-full left-0 bg-card text-foreground rounded-lg shadow-xl py-2 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+//                   {item.dropdownItems.map((dropdownItem, dropIndex) => (
+//                     <Link
+//                       key={dropIndex}
+//                       to={dropdownItem.to}
+//                       className="block px-4 py-2 hover:bg-muted hover:text-primary"
+//                     >
+//                       {dropdownItem.label}
+//                     </Link>
+//                   ))}
+//                 </div>
+//               </div>
+//             ) : (
+//               <Link
+//                 key={index}
+//                 to={item.to || ""}
+//                 className="text-foreground hover:text-primary transition"
+//               >
+//                 {item.label}
+//               </Link>
+//             )
+//           )}
+//         </div>
+
+//         {/* Search Box */}
+//         <div className="relative hidden lg:block">
+//           <input
+//             value={trackingId}
+//             onChange={handleInputChange}
+//             onKeyDown={handleKeyDown}
+//             type="text"
+//             placeholder="Track package..."
+//             className="bg-input text-foreground px-4 py-2 pl-10 rounded-lg border border-border focus:outline-none focus:border-primary transition-all duration-300 w-64"
+//           />
+//         </div>
+
+//         {/* Right Side (ModeToggle + Mobile menu btn) */}
+//         <div className="flex items-center gap-4">
+//           <ModeToggle />
+//           <button
+//             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+//             className="lg:hidden text-foreground"
+//           >
+//             {mobileMenuOpen ? <X /> : <Menu />}
+//           </button>
+//         </div>
+//       </div>
+
+//       {/* Mobile Menu */}
+//       {mobileMenuOpen && (
+//         <div className="lg:hidden bg-background border-t border-border px-4 py-4 space-y-4">
+//           {navItems.map((item, index) =>
+//             item.hasDropdown ? (
+//               <div key={index}>
+//                 <p className="font-medium text-foreground">{item.label}</p>
+//                 <div className="pl-4 space-y-2">
+//                   {item.dropdownItems.map((dropdownItem, dropIndex) => (
+//                     <Link
+//                       key={dropIndex}
+//                       to={dropdownItem.to}
+//                       className="block text-muted-foreground hover:text-primary"
+//                     >
+//                       {dropdownItem.label}
+//                     </Link>
+//                   ))}
+//                 </div>
+//               </div>
+//             ) : (
+//               <Link
+//                 key={index}
+//                 to={item.to || ""}
+//                 className="block text-foreground hover:text-primary"
+//               >
+//                 {item.label}
+//               </Link>
+//             )
+//           )}
+
+//           {/* Mobile Search */}
+//           <div className="relative">
+//             <input
+//               value={trackingId}
+//               onChange={handleInputChange}
+//               onKeyDown={handleKeyDown}
+//               type="text"
+//               placeholder="Track package..."
+//               className="bg-input text-foreground px-4 py-2 pl-10 rounded-lg border border-border focus:outline-none focus:border-primary transition-all duration-300 w-full"
+//             />
+//           </div>
+//         </div>
+//       )}
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
+

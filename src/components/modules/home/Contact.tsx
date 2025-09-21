@@ -3,7 +3,7 @@ import { ArrowRight, Mail, Phone } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section className="py-20 bg-black text-white">
+    <section className="py-20 bg-background text-foreground">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
@@ -13,14 +13,14 @@ const Contact = () => {
                 <span>Get Started</span>
               </div>
               <h2 className="text-4xl lg:text-5xl font-bold">Ready to Ship?</h2>
-              <p className="text-xl text-gray-300 leading-relaxed">
+              <p className="text-xl  leading-relaxed">
                 Get started with our premium delivery service today. Fast,
                 secure, and reliable shipping solutions await you.
               </p>
             </div>
 
             <div className="space-y-4">
-              <div className="flex items-center gap-4 bg-gray-900 p-4 rounded-xl border border-gray-800">
+              <div className="flex items-center gap-4 bg-background p-4 rounded-xl border border-gray-800">
                 <div className="bg-primary rounded-full p-3">
                   <Phone className="w-6 h-6 text-white" />
                 </div>
@@ -30,7 +30,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 bg-gray-900 p-4 rounded-xl border border-gray-800">
+              <div className="flex items-center gap-4  p-4 rounded-xl border border-gray-800">
                 <div className="bg-primary rounded-full p-3">
                   <Mail className="w-6 h-6 text-white" />
                 </div>
@@ -54,7 +54,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="bg-gray-900 rounded-3xl p-8 border border-gray-800">
+          <div className=" rounded-3xl p-8 border border-gray-800">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-center mb-8">
                 Quick Quote
@@ -68,7 +68,7 @@ const Contact = () => {
                   <input
                     type="text"
                     placeholder="Origin city"
-                    className="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                    className="w-full px-4 py-3 rounded-lg  border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
                   />
                 </div>
                 <div>
@@ -78,7 +78,7 @@ const Contact = () => {
                   <input
                     type="text"
                     placeholder="Destination city"
-                    className="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                    className="w-full px-4 py-3 rounded-lg  border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
                   />
                 </div>
               </div>
@@ -91,14 +91,14 @@ const Contact = () => {
                   <input
                     type="number"
                     placeholder="0.5"
-                    className="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                    className="w-full px-4 py-3 rounded-lg  border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Service
                   </label>
-                  <select className="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary">
+                  <select className="w-full px-4 py-3 rounded-lg  border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary">
                     <option>Express</option>
                     <option>Standard</option>
                     <option>Economy</option>

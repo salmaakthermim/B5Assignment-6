@@ -33,7 +33,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-primary/12 text-primary px-4 py-2 rounded-full font-semibold mb-4">
@@ -53,7 +53,7 @@ const Services = () => {
           {servicesData.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-muted-foreground/20 hover:border-primary/70 group"
+              className="bg-background rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-muted-foreground/20 hover:border-primary/70 group"
             >
               <div className="text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
                 {service.icon}

@@ -32,7 +32,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-primary/12 text-primary px-4 py-2 rounded-full font-semibold mb-4">
@@ -52,7 +52,7 @@ const Testimonials = () => {
           {testimonialsData.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-muted-foreground/20 hover:border-primary/70 group"
+              className="bg-background rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-muted-foreground/20 hover:border-primary/70 group"
             >
               <div className="flex gap-1 mb-6">
                 {[...Array(testimonial.rating)].map((_, i) => (

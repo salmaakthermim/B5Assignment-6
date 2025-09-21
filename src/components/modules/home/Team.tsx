@@ -14,7 +14,7 @@ const Team = () => {
       name: 'Sarah Chen',
       role: 'Chief Technology Officer',
       image:
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
+        'https://lastfm.freetls.fastly.net/i/u/ar0/23a874fdbd89ab75ed27e44d862dbace.jpg',
       bio: 'Former Google engineer who revolutionized our tracking technology and developed our AI-powered logistics system.',
       social: { linkedin: '#', twitter: '#' },
     },

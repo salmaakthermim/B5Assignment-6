@@ -3,7 +3,7 @@ import { Clock, MapPin, ShieldCheck } from 'lucide-react';
 const Features = () => {
   const featuresData = [
     {
-      icon: <MapPin className="w-6 h-6 text-primary" />,
+      icon: <MapPin className="w-6 h-6 text-foreground" />,
       title: 'Real-Time Tracking',
       description:
         'Monitor your package every step of the way with live GPS tracking and instant status updates.',
@@ -32,7 +32,7 @@ const Features = () => {
                 <ShieldCheck className="w-5 h-5" />
                 <span>Why Choose Us</span>
               </div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-black">
+              <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
                 Advanced Features for Perfect Delivery
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -45,16 +45,16 @@ const Features = () => {
               {featuresData.map(({ icon, title, description }, idx) => (
                 <div
                   key={idx}
-                  className="flex gap-4 bg-white p-6 rounded-2xl border border-muted-foreground/20 hover:border-primary/70 transition-all duration-300"
+                  className="flex gap-4 bg-background p-6 rounded-2xl border border-muted-foreground/20 hover:border-primary/70 transition-all duration-300"
                 >
                   <div className="bg-primary/12 rounded-xl p-3 flex-shrink-0">
                     {icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-black mb-2">
+                    <h3 className="text-xl font-bold text-foreground mb-2">
                       {title}
                     </h3>
-                    <p className="text-muted-foreground">{description}</p>
+                    <p className="text-foreground">{description}</p>
                   </div>
                 </div>
               ))}
@@ -62,9 +62,9 @@ const Features = () => {
           </div>
 
           <div className="relative">
-            <div className="bg-black rounded-3xl p-8 text-white">
+            <div className="bg-background rounded-3xl p-8 text-foreground">
               <div className="space-y-6">
-                <div className="bg-gray-800 rounded-2xl p-6 border border-gray-700">
+                <div className=" rounded-2xl p-6 border border-gray-700">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-sm font-medium">
                       Package #DL2024001
