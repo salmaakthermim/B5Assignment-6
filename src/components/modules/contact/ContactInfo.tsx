@@ -51,13 +51,13 @@ const ContactInfo = () => {
   ];
 
   return (
-    <SectionContainer className="">
+    <SectionContainer className=" ">
       <div className="text-center mb-16">
-        <div className="inline-flex items-center gap-2 bg-primary/12 text-primary px-4 py-2 rounded-full font-semibold mb-4">
+        <div className="inline-flex items-center gap-2 bg-background text-primary px-4 py-2 rounded-full font-semibold mb-4">
           <Contact2Icon className="w-5 h-5" />
           <span>Reach Us</span>
         </div>
-        <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
+        <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
           Multiple Ways to Reach Us
         </h2>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -67,7 +67,7 @@ const ContactInfo = () => {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {contactMethods.map(({ icon: Icon, title, content, link, linkText }, idx) => (
-          <div key={idx} className="bg-white p-8 rounded-xl border border-muted-foreground/25 hover:border-primary transition-all duration-300 group">
+          <div key={idx} className="bg-background p-8 rounded-xl border border-muted-foreground/25 hover:border-primary transition-all duration-300 group">
             <div className="flex items-center mb-6">
               <div className="bg-primary/10 p-3 rounded-lg group-hover:text-primary group-hover:bg-primary/15 transition-colors duration-300">
                 <Icon />
@@ -76,7 +76,7 @@ const ContactInfo = () => {
             </div>
             <div className="space-y-2">
               {content?.map((item, index) => (
-                <p key={index} className="text-gray-400">
+                <p key={index} className="">
                   {item}
                 </p>
               ))}

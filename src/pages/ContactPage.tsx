@@ -6,7 +6,7 @@ import OfficeLocations from '@/components/modules/contact/OfficeLocations';
 
 const ContactPage = () => {
   return (
-    <div className='bg-gray-50 space-y-16'>
+    <div className='bg-background space-y-16'>
       <ContactHero />
       <ContactInfo />
       <ContactForm />

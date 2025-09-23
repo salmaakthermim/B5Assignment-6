@@ -52,7 +52,7 @@ const OfficeLocations = () => {
         {offices.map((office, index) => (
           <div
             key={index}
-            className="p-6 bg-white rounded-xl border border-muted-foreground/25 hover:border-primary transition-all duration-300"
+            className="p-6 bg-background rounded-xl border border-muted-foreground/25 hover:border-primary transition-all duration-300"
           >
             <div className="flex items-center mb-4">
               <Building className="w-6 h-6 text-primary mr-3" />
