@@ -40,17 +40,17 @@ const CompanyStory = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full font-semibold mb-4">
             <Clock className="w-5 h-5" />
             <span>Our Journey</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Our Story of Growth & Innovation
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl  max-w-3xl mx-auto">
             From humble beginnings to global leadership, discover how we've
             evolved to become the world's most trusted delivery partner.
           </p>
@@ -73,19 +73,19 @@ const CompanyStory = () => {
                     index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'
                   }`}
                 >
-                  <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-200 hover:border-green-200 transition-all duration-300">
+                  <div className="bg-background p-6 rounded-2xl shadow-lg border border-gray-200 hover:border-green-200 transition-all duration-300">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="bg-green-100 p-2 rounded-lg text-green-600">
                         {milestone.icon}
                       </div>
-                      <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                      <div className="bg-green-500 text-foreground px-3 py-1 rounded-full text-sm font-bold">
                         {milestone.year}
                       </div>
                     </div>
-                    <h3 className="text-2xl font-bold text-black mb-3">
+                    <h3 className="text-2xl font-bold text-foreground mb-3">
                       {milestone.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className=" leading-relaxed">
                       {milestone.description}
                     </p>
                   </div>

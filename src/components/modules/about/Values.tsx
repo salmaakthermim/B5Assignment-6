@@ -52,17 +52,17 @@ const Values = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full font-semibold mb-4">
             <Award className="w-5 h-5" />
             <span>Our Values</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             What Drives Us Forward
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl  max-w-3xl mx-auto">
             Our core values shape everything we do, from how we handle your
             packages to how we serve our communities worldwide.
           </p>
@@ -72,22 +72,22 @@ const Values = () => {
           {values.map((value, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-green-200 group"
+              className="bg-background rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-green-200 group"
             >
-              <div className="text-green-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className=" mb-6 group-hover:scale-110 transition-transform duration-300">
                 {value.icon}
               </div>
-              <h3 className="text-xl font-bold text-black mb-4">
+              <h3 className="text-xl font-bold  mb-4">
                 {value.title}
               </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className=" mb-6 leading-relaxed">
                 {value.description}
               </p>
               <ul className="space-y-2">
                 {value.features.map((feature, idx) => (
                   <li
                     key={idx}
-                    className="flex items-center gap-2 text-sm text-gray-700"
+                    className="flex items-center gap-2 text-sm "
                   >
                     <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                     <span>{feature}</span>
