@@ -1,7 +1,8 @@
-import ContactFAQ from '@/components/modules/contact/ContactFAQ';
+
 import ContactForm from '@/components/modules/contact/ContactForm';
 import ContactHero from '@/components/modules/contact/ContactHero';
 import ContactInfo from '@/components/modules/contact/ContactInfo';
+import ContactWithMap from '@/components/modules/contact/ContactWithMap';
 import OfficeLocations from '@/components/modules/contact/OfficeLocations';
 
 const ContactPage = () => {
@@ -11,7 +12,8 @@ const ContactPage = () => {
       <ContactInfo />
       <ContactForm />
       <OfficeLocations />
-      <ContactFAQ />
+      <ContactWithMap></ContactWithMap>
+      
     </div>
   );
 };
