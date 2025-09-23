@@ -61,17 +61,17 @@ const OurAwards = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full font-semibold mb-4">
+          <div className="inline-flex items-center gap-2   px-4 py-2 rounded-full font-semibold mb-4">
             <Award className="w-5 h-5" />
             <span>Recognition</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Awards & Achievements
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl max-w-3xl mx-auto">
             Our commitment to excellence has been recognized by industry leaders
             and customers worldwide.
           </p>
@@ -81,24 +81,24 @@ const OurAwards = () => {
           {achievements.map((achievement, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-green-200 group"
+              className="bg-background rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-green-200 group"
             >
               <div className="flex items-start gap-4 mb-4">
-                <div className="bg-green-100 p-3 rounded-xl text-green-600 group-hover:bg-green-500 group-hover:text-white transition-colors duration-300">
+                <div className=" p-3 rounded-xl text-green-600 group-hover:bg-green-500 group-hover:text-white transition-colors duration-300">
                   {achievement.icon}
                 </div>
-                <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                <div className=" text-foreground px-3 py-1 rounded-full text-sm font-bold">
                   {achievement.year}
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold text-black mb-2">
+              <h3 className="text-xl font-bold text-foreground mb-2">
                 {achievement.title}
               </h3>
-              <p className="text-green-600 font-semibold mb-3">
+              <p className=" font-semibold mb-3">
                 {achievement.organization}
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className=" leading-relaxed">
                 {achievement.description}
               </p>
             </div>
@@ -107,16 +107,16 @@ const OurAwards = () => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <div className="bg-black rounded-3xl p-12 text-white">
+          <div className="bg-background rounded-3xl p-12 text-foreground">
             <h3 className="text-3xl font-bold mb-4">
               Ready to Experience Excellence?
             </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl  mb-8 max-w-2xl mx-auto">
               Join millions of satisfied customers who trust DeliveryPro for
               their shipping needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-green-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-600 transition-colors duration-300 flex items-center justify-center gap-2">
+              <button className="bg-green-500 text-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-600 transition-colors duration-300 flex items-center justify-center gap-2">
                 Start Shipping <Package className="w-5 h-5" />
               </button>
               <button className="border-2 border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-500 hover:text-white transition-all duration-300">

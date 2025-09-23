@@ -37,17 +37,17 @@ const Team = () => {
   ];
 
   return (
-    <section className="py-20 bg-black text-white">
+    <section className="py-20 bg-background text-foreground">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full font-semibold mb-4">
+          <div className="inline-flex items-center gap-2 bg-green-500/20  px-4 py-2 rounded-full font-semibold mb-4">
             <Users className="w-5 h-5" />
             <span>Our Team</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             Meet the Visionaries Behind DeliveryPro
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl  max-w-3xl mx-auto">
             Our leadership team combines decades of experience in logistics,
             technology, and customer service to drive innovation in the delivery
             industry.
@@ -58,7 +58,7 @@ const Team = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-gray-900 rounded-2xl p-6 border border-gray-800 hover:border-green-500/50 transition-all duration-300 group"
+              className="bg-background rounded-2xl p-6 border border-gray-800 hover:border-green-500/50 transition-all duration-300 group"
             >
               <div className="relative mb-6">
                 <img
@@ -73,23 +73,23 @@ const Team = () => {
                 <h3 className="text-xl font-bold text-white mb-1">
                   {member.name}
                 </h3>
-                <p className="text-green-400 font-semibold mb-4">
+                <p className=" font-semibold mb-4">
                   {member.role}
                 </p>
-                <p className="text-gray-300 text-sm leading-relaxed mb-6">
+                <p className=" text-sm leading-relaxed mb-6">
                   {member.bio}
                 </p>
 
                 <div className="flex justify-center gap-3">
                   <a
                     href={member.social.linkedin}
-                    className="bg-gray-800 p-2 rounded-lg hover:bg-green-500 transition-colors duration-300"
+                    className="p-2 rounded-lg hover:bg-green-500 transition-colors duration-300"
                   >
                     <Users className="w-4 h-4" />
                   </a>
                   <a
                     href={member.social.twitter}
-                    className="bg-gray-800 p-2 rounded-lg hover:bg-green-500 transition-colors duration-300"
+                    className=" p-2 rounded-lg hover:bg-green-500 transition-colors duration-300"
                   >
                     <Globe className="w-4 h-4" />
                   </a>
