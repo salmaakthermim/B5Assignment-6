@@ -27,7 +27,7 @@ const DataTable = <T,>({
               <td colSpan={columns?.length} className="text-center py-12">
                 <div className="flex items-center justify-center space-x-2">
                   <div className="h-4 w-4 animate-spin rounded-full border-2 border-gray-300 border-t-gray-600"></div>
-                  <span className="text-sm text-gray-500">Loading...</span>
+                  <span className="text-sm ">Loading...</span>
                 </div>
               </td>
             </tr>
@@ -43,7 +43,7 @@ const DataTable = <T,>({
           ) : !data || data.length === 0 ? (
             <tr>
               <td colSpan={columns?.length} className="text-center py-12">
-                <div className="text-gray-500 text-sm">
+                <div className=" text-sm">
                   <div className="mb-2">📄</div>
                   {emptyMessage}
                 </div>
