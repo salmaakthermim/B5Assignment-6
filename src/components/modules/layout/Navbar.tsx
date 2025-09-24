@@ -151,7 +151,7 @@ const Navbar = () => {
       to={to}
       className={({ isActive }) =>
         `font-medium transition-colors duration-300 ${className} ${
-          isActive ? 'text-primary' : 'text-white hover:text-primary'
+          isActive ? 'text-primary' : 'text-foreground hover:text-primary'
         }`
       }
       onClick={onClick}
@@ -185,7 +185,7 @@ const Navbar = () => {
         `block px-2 py-3 rounded-lg transition-colors duration-300 ${
           isActive
             ? ' bg-background text-primary'
-            : 'text-white hover:text-primary hover:bg-gray-800'
+            : 'text-foreground hover:text-primary hover:bg-gray-800'
         }`
       }
       onClick={onClick}
@@ -227,7 +227,7 @@ const Navbar = () => {
                     {item.label}
                     <ArrowRight className="w-4 h-4 transform rotate-90 group-hover:rotate-0 transition-transform duration-300" />
                   </CustomNavLink>
-                  <div className="absolute top-full left-0 bg-white text-black rounded-lg shadow-xl py-2 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+                  <div className="absolute top-full left-0 bg-background text-foreground rounded-lg shadow-xl py-2 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
                     {item.dropdownItems.map((dropdownItem, dropIndex) => (
                       <DropdownItem key={dropIndex} to={dropdownItem.to}>
                         {dropdownItem.label}
@@ -255,18 +255,18 @@ const Navbar = () => {
                 onKeyDown={handleKeyDown}
                 type="text"
                 placeholder="Track package..."
-                className="bg-gray-800 text-white px-4 py-2 pl-10 rounded-lg border border-gray-700 focus:outline-none focus:border-primary focus:bg-gray-700 transition-all duration-300 w-full"
+                className=" text-foreground px-4 py-2 pl-10 rounded-lg border border-gray-700 focus:outline-none focus:border-primary focus:bg-gray-700 transition-all duration-300 w-full"
               />
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 " />
               
 
               {/* Search Results */}
               {showResults && (
-                <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 z-50 w-96">
+                <div className="absolute top-full left-0 right-0 mt-2 bg-background rounded-lg shadow-xl border border-gray-200 z-50 w-96">
                   {isTracking ? (
                     <div className="p-6 text-center">
                       <Loader2 className="w-6 h-6 animate-spin mx-auto mb-2 text-primary" />
-                      <p className="text-gray-600">Tracking your package...</p>
+                      <p className="">Tracking your package...</p>
                     </div>
                   ) : trackingError ? (
                     <div className="p-6 text-center">
@@ -274,7 +274,7 @@ const Navbar = () => {
                       <p className="text-red-600 font-medium">
                         Package not found
                       </p>
-                      <p className="text-gray-500 text-sm mt-1">
+                      <p className=" text-sm mt-1">
                         Please check your tracking ID and try again
                       </p>
                       <button
@@ -289,13 +289,13 @@ const Navbar = () => {
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center gap-2">
                           <Package className="w-5 h-5 text-primary" />
-                          <h3 className="font-semibold text-gray-900">
+                          <h3 className="font-semibold">
                             Tracking ID: {searchTrackingId}
                           </h3>
                         </div>
                         <button
                           onClick={closeResults}
-                          className="text-gray-400 hover:text-gray-600"
+                          className="hover:text-gray-600"
                         >
                           <X className="w-5 h-5" />
                         </button>
@@ -331,12 +331,12 @@ const Navbar = () => {
 
                         {trackingData.estimatedDelivery && (
                           <div className="flex items-center gap-3">
-                            <Clock className="w-5 h-5 text-gray-400" />
+                            <Clock className="w-5 h-5 " />
                             <div>
-                              <p className="font-medium text-gray-900">
+                              <p className="font-medium">
                                 Estimated Delivery
                               </p>
-                              <p className="text-gray-600 text-sm">
+                              <p className=" text-sm">
                                 {trackingData.estimatedDelivery}
                               </p>
                             </div>
@@ -381,7 +381,7 @@ const Navbar = () => {
                       {isLoading ? (
                         <div className="flex items-center justify-center space-x-2">
                           <div className="h-4 w-4 animate-spin rounded-full border-2 border-gray-300 border-t-gray-600"></div>
-                          <span className="text-sm text-gray-500"></span>
+                          <span className="text-sm "></span>
                         </div>
                       ) : (
                         <Avatar>
@@ -422,7 +422,7 @@ const Navbar = () => {
                   `duration-300 block p-2 rounded-md border transition-colors ${
                     isActive
                       ? 'bg-primary/20 border-primary'
-                      : 'bg-gray-800 border-transparent hover:border-primary hover:bg-gray-700'
+                      : ' border-transparent hover:border-primary hover:bg-gray-700'
                   }`
                 }
               >
@@ -435,7 +435,7 @@ const Navbar = () => {
                     {isLoading ? (
                       <div className="flex items-center justify-center space-x-2">
                         <div className="h-4 w-4 animate-spin rounded-full border-2 border-gray-300 border-t-gray-600"></div>
-                        <span className="text-sm text-gray-500"></span>
+                        <span className="text-sm "></span>
                       </div>
                     ) : (
                       <Avatar>
@@ -484,7 +484,7 @@ const Navbar = () => {
                 onKeyDown={handleKeyDown}
                 type="text"
                 placeholder="Track package..."
-                className="bg-gray-800 text-white px-4 py-2 pl-10 rounded-lg border border-gray-700 focus:outline-none focus:border-primary focus:bg-gray-700 transition-all duration-300 w-full"
+                className=" text-foreground px-4 py-2 pl-10 rounded-lg border border-gray-700 focus:outline-none focus:border-primary focus:bg-gray-700 transition-all duration-300 w-full"
               />
               <Search className="absolute left-5 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
 
@@ -617,154 +617,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-// import { useState } from "react";
-// // import { Link } from "react-router-dom";
-// import { ArrowRight, Menu, X } from "lucide-react";
-// // import { ModeToggle } from "./ModeToggle";
-// import { Link } from "react-router";
-// import { ModeToggle } from "@/components/ui/mode-toggle";
-
-// const Navbar = () => {
-//   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-//   const [trackingId, setTrackingId] = useState("");
-
-//   const navItems = [
-//     { label: "Home", to: "/" },
-//     { label: "About", to: "/about" },
-//     {
-//       label: "Services",
-//       hasDropdown: true,
-//       dropdownItems: [
-//         { label: "Delivery", to: "/services/delivery" },
-//         { label: "Tracking", to: "/services/tracking" },
-//       ],
-//     },
-//     { label: "Contact", to: "/contact" },
-//   ];
-
-//   const handleInputChange = (e) => setTrackingId(e.target.value);
-//   const handleKeyDown = (e) => {
-//     if (e.key === "Enter") {
-//       console.log("Tracking:", trackingId);
-//     }
-//   };
-
-//   return (
-//     <nav className="w-full border-b border-border bg-background text-foreground sticky top-0 z-50">
-//       <div className="max-w-7xl mx-auto px-4 lg:px-8 flex items-center justify-between h-16">
-//         {/* Logo */}
-//         <Link to="/" className="text-xl font-bold text-primary">
-//           ParcelPro
-//         </Link>
-
-//         {/* Desktop Nav */}
-//         <div className="hidden lg:flex items-center space-x-8">
-//           {navItems.map((item, index) =>
-//             item.hasDropdown ? (
-//               <div key={index} className="relative group">
-//                 <Link
-//                   to={item.to}
-//                   className="flex items-center gap-1 text-foreground hover:text-primary transition"
-//                 >
-//                   {item.label}
-//                   <ArrowRight className="w-4 h-4 transform rotate-90 group-hover:rotate-0 transition-transform duration-300" />
-//                 </Link>
-//                 <div className="absolute top-full left-0 bg-card text-foreground rounded-lg shadow-xl py-2 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
-//                   {item.dropdownItems.map((dropdownItem, dropIndex) => (
-//                     <Link
-//                       key={dropIndex}
-//                       to={dropdownItem.to}
-//                       className="block px-4 py-2 hover:bg-muted hover:text-primary"
-//                     >
-//                       {dropdownItem.label}
-//                     </Link>
-//                   ))}
-//                 </div>
-//               </div>
-//             ) : (
-//               <Link
-//                 key={index}
-//                 to={item.to || ""}
-//                 className="text-foreground hover:text-primary transition"
-//               >
-//                 {item.label}
-//               </Link>
-//             )
-//           )}
-//         </div>
-
-//         {/* Search Box */}
-//         <div className="relative hidden lg:block">
-//           <input
-//             value={trackingId}
-//             onChange={handleInputChange}
-//             onKeyDown={handleKeyDown}
-//             type="text"
-//             placeholder="Track package..."
-//             className="bg-input text-foreground px-4 py-2 pl-10 rounded-lg border border-border focus:outline-none focus:border-primary transition-all duration-300 w-64"
-//           />
-//         </div>
-
-//         {/* Right Side (ModeToggle + Mobile menu btn) */}
-//         <div className="flex items-center gap-4">
-//           <ModeToggle />
-//           <button
-//             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-//             className="lg:hidden text-foreground"
-//           >
-//             {mobileMenuOpen ? <X /> : <Menu />}
-//           </button>
-//         </div>
-//       </div>
-
-//       {/* Mobile Menu */}
-//       {mobileMenuOpen && (
-//         <div className="lg:hidden bg-background border-t border-border px-4 py-4 space-y-4">
-//           {navItems.map((item, index) =>
-//             item.hasDropdown ? (
-//               <div key={index}>
-//                 <p className="font-medium text-foreground">{item.label}</p>
-//                 <div className="pl-4 space-y-2">
-//                   {item.dropdownItems.map((dropdownItem, dropIndex) => (
-//                     <Link
-//                       key={dropIndex}
-//                       to={dropdownItem.to}
-//                       className="block text-muted-foreground hover:text-primary"
-//                     >
-//                       {dropdownItem.label}
-//                     </Link>
-//                   ))}
-//                 </div>
-//               </div>
-//             ) : (
-//               <Link
-//                 key={index}
-//                 to={item.to || ""}
-//                 className="block text-foreground hover:text-primary"
-//               >
-//                 {item.label}
-//               </Link>
-//             )
-//           )}
-
-//           {/* Mobile Search */}
-//           <div className="relative">
-//             <input
-//               value={trackingId}
-//               onChange={handleInputChange}
-//               onKeyDown={handleKeyDown}
-//               type="text"
-//               placeholder="Track package..."
-//               className="bg-input text-foreground px-4 py-2 pl-10 rounded-lg border border-border focus:outline-none focus:border-primary transition-all duration-300 w-full"
-//             />
-//           </div>
-//         </div>
-//       )}
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
 
