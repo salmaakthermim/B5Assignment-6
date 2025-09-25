@@ -18,7 +18,7 @@ const TableHeader = <T,>({ columns }: TableHeaderProps<T>) => {
         {columns.map((column) => (
           <TableHead
             key={String(column.key)}
-            className={`px-1 py-4 text-sm font-medium text-gray-700 text-center ${
+            className={`px-1 py-4 text-sm font-medium  text-center ${
               column.headerClassName || ''
             }`}
             style={{

@@ -23,13 +23,13 @@ const TableRow = <T,>({ item, columns, rowIndex }: TableRowProps<T>) => {
         >
           <div className="overflow-hidden">
             {column.key === 'index' ? (
-              <span className="text-sm text-gray-700 font-medium">
+              <span className="text-sm  font-medium">
                 {rowIndex + 1}
               </span>
             ) : column.render ? (
               column.render(item)
             ) : (
-              <span className="text-sm text-gray-700 block truncate">
+              <span className="text-sm  block truncate">
                 {String(item[column.key as keyof T] ?? '')}
               </span>
             )}

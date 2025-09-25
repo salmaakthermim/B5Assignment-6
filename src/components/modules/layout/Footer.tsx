@@ -13,7 +13,6 @@ import {
   Truck,
   Twitter,
 } from 'lucide-react';
-import { Link } from 'react-router';
 
 const Footer = () => {
   return (

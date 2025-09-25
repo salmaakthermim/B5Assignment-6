@@ -12,9 +12,6 @@ import { loggedInUser, removeUser } from '@/redux/features/auth/authSlice';
 import {
   Menu,
   X,
-  Phone,
-  Mail,
-  Globe,
   ArrowRight,
   User,
   Search,
