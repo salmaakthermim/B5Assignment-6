@@ -106,7 +106,7 @@ const RegistrationForm = () => {
               <Input
                 id="name"
                 type="text"
-                placeholder="Ariyan Rahman Anas"
+                placeholder="Salma Akther Mim"
                 {...register('name', { required: true })}
               />
             </div>

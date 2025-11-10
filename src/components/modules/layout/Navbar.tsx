@@ -382,7 +382,7 @@ const Navbar = () => {
                         </div>
                       ) : (
                         <Avatar>
-                          <AvatarImage src="https://github.com/shadcn.png" />
+                          <AvatarImage src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc8xPyUzhtWeHylA63aZUzzPHTWSUNM5GpHg&s" />
                           <AvatarFallback>CN</AvatarFallback>
                         </Avatar>
                       )}
@@ -436,7 +436,7 @@ const Navbar = () => {
                       </div>
                     ) : (
                       <Avatar>
-                        <AvatarImage src="https://github.com/shadcn.png" />
+                        <AvatarImage src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc8xPyUzhtWeHylA63aZUzzPHTWSUNM5GpHg&s" />
                         <AvatarFallback>CN</AvatarFallback>
                       </Avatar>
                     )}
