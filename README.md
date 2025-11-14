@@ -93,9 +93,9 @@ npm run dev
 
 | Role     | Email                                                   | Password |
 | -------- | ------------------------------------------------------- | -------- |
-| Admin    | [heyadmin@admin.com](mailto:heyadmin@admin.com)         | A1234!   |
-| Sender   | [heybro22@hey.com](mailto:heybro22@hey.com)             | A1234!   |
-| Receiver | [heybrorcv@receiver.com](mailto:heybrorcv@receiver.com) | A1234!   |
+Admim   puspo@gmail.com             A1234!
+sender  nila@gmail.com              Nila123#
+receiver  maya@gmail.com           Maya123@
 
 📊 Dashboard Overview
 
